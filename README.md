@@ -22,7 +22,7 @@ If you don't do this, you won't see any logs appear in cloud watch.
 
 **Create a secrets file**
 
-    cp aws-secret.template.yaml aws-secret.yaml
+    cp aws-secret.yaml.template aws-secret.yaml
 
 
 Add your credentials, taking care to encode your values in base 64. 
@@ -54,7 +54,8 @@ Add your credentials, taking care to encode your values in base 64.
 
 **deploy**
 
-    kubectl apply -f .`
+    kubectl apply -f ./fluentd-ds.yaml
+    kubectl apply  -f ./fluentd-configmap.yaml
 
 
 
